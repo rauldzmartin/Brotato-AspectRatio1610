@@ -49,20 +49,6 @@ Write-Host "✓ Package created: $zipName" -ForegroundColor Green
 $vdfContentDir = $contentDir -replace '\\', '\\'
 $vdfPreview = $previewPath -replace '\\', '\\'
 
-$descriptionFile = "$workspaceRoot\description.md"
-$itemDescription = ""
-if (Test-Path $descriptionFile) {
-    $descRaw = Get-Content $descriptionFile -Raw
-    if ($descRaw -match '(?ms)```bbcode\s*\r?\n(.*?)\r?\n```') {
-        $itemDescription = $matches[1] -replace '\\', '\\' -replace '"', '\"'
-    }
-}
-
-$descField = ""
-if (-not [string]::IsNullOrWhiteSpace($itemDescription)) {
-    $descField = "`t`"description`"`t`"$itemDescription`""
-}
-
 $vdfContent = @"
 "workshopitem"
 {
@@ -72,7 +58,6 @@ $vdfContent = @"
 	"previewfile"		"$vdfPreview"
 	"visibility"		"0"
 	"title"				"AspectRatio1610 (Steam Deck & 16:10 Fullscreen)"
-$descField
 	"changenote"		"$ChangeNote"
 }
 "@
