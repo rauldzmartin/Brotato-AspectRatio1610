@@ -1,31 +1,34 @@
-# Godot 3 / ModLoader temporary files
-*.import
+# ==========================================
+# Brotato Mod — Git Ignore Configuration
+# ==========================================
+
+# --- Godot 3 / Engine Artifacts ---
 .import/
+*.import
 export_presets.cfg
 
-# Logs & backups
-*.log
-*.bak*
-*.tmp
-HANDOFF*.md
-HANDOVER*.md
-
-# Packaged distribution archives
+# --- Build Outputs & Packages ---
+dist/
 *.zip
 *.pck
-dist/
 *.vdf
 
-# Internal development & workshop tooling
+# --- Logs & Temporary Files ---
+*.log
+*.tmp
+*.bak*
+
+# --- Internal Tooling & Workshop Metadata ---
 .agents/
 AGENTS.md
 description.md
 preview.jpg
 
-# OS / Editor metadata
-.DS_Store
-Thumbs.db
-desktop.ini
+# --- IDE & Editor Settings ---
 .vscode/
 .idea/
 
+# --- Operating System Artifacts ---
+.DS_Store
+Thumbs.db
+desktop.ini
