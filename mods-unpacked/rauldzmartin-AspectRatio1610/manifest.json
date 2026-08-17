@@ -1,9 +1,9 @@
 {
 	"name": "AspectRatio1610",
 	"namespace": "rauldzmartin",
-	"version_number": "1.0.0",
+	"version_number": "1.0.1",
 	"description": "Native 16:10 fullscreen support for 16:10 monitors, laptops, and handhelds (Steam Deck, 1280x800, 1920x1200, 2560x1600). Full-screen gameplay and shop without black bars, with top-anchored HUD and clean 16:9 letterbox menus.",
-	"website_url": "",
+	"website_url": "https://github.com/rauldzmartin/Brotato-AspectRatio1610",
 	"dependencies": [],
 	"extra": {
 		"godot": {

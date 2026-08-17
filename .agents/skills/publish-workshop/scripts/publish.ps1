@@ -49,6 +49,20 @@ Write-Host "✓ Package created: $zipName" -ForegroundColor Green
 $vdfContentDir = $contentDir -replace '\\', '\\'
 $vdfPreview = $previewPath -replace '\\', '\\'
 
+$descriptionFile = "$workspaceRoot\description.md"
+$itemDescription = ""
+if (Test-Path $descriptionFile) {
+    $descRaw = Get-Content $descriptionFile -Raw
+    if ($descRaw -match '(?ms)```bbcode\s*\r?\n(.*?)\r?\n```') {
+        $itemDescription = $matches[1] -replace '\\', '\\' -replace '"', '\"'
+    }
+}
+
+$descField = ""
+if (-not [string]::IsNullOrWhiteSpace($itemDescription)) {
+    $descField = "`t`"description`"`t`"$itemDescription`""
+}
+
 $vdfContent = @"
 "workshopitem"
 {
@@ -58,6 +72,7 @@ $vdfContent = @"
 	"previewfile"		"$vdfPreview"
 	"visibility"		"0"
 	"title"				"AspectRatio1610 (Steam Deck & 16:10 Fullscreen)"
+$descField
 	"changenote"		"$ChangeNote"
 }
 "@
@@ -141,8 +156,8 @@ try {
             $relBody = @{
                 tag_name = $versionTag
                 target_commitish = "main"
-                name = "$versionTag: AspectRatio1610 (Steam Deck & 16:10 Fullscreen)"
-                body = "### Changes in $versionTag`n`n$ChangeNote`n`n### Installation:`n- **Steam Workshop:** [Subscribe on Steam Community](https://steamcommunity.com/sharedfiles/filedetails/?id=$WorkshopId)`n- **Manual:** Extract `$zipName` into your Brotato `mods-unpacked/` directory."
+                name = "${versionTag}: AspectRatio1610 (Steam Deck & 16:10 Fullscreen)"
+                body = "### Changes in ${versionTag}`n`n$ChangeNote`n`n### Installation:`n- **Steam Workshop:** [Subscribe on Steam Community](https://steamcommunity.com/sharedfiles/filedetails/?id=$WorkshopId)`n- **Manual:** Extract `${zipName}` into your Brotato `mods-unpacked/` directory."
                 draft = $false
                 prerelease = $false
             } | ConvertTo-Json
@@ -162,7 +177,7 @@ try {
             $assetObj = Invoke-RestMethod -Uri $uploadUri -Method Post -Headers $uploadHeaders -Body $zipBytes
             Write-Host "✓ Zip subido a GitHub Release: $($assetObj.browser_download_url)" -ForegroundColor Green
         } else {
-            Write-Host "✓ GitHub Release ya existe para $versionTag: $($existingRelease.html_url)" -ForegroundColor Green
+            Write-Host "✓ GitHub Release ya existe para ${versionTag}: $($existingRelease.html_url)" -ForegroundColor Green
         }
     } else {
         Write-Host "Nota: No se pudo obtener el token de Git para crear la release en GitHub de forma automática." -ForegroundColor Yellow

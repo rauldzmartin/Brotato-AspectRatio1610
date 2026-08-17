@@ -1,7 +1,7 @@
 # AspectRatio1610 (Brotato Mod)
 
 **Author:** rauldzmartin  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 **Compatibility:** Brotato v1.1.15.4+ (ModLoader v6.2.0+)  
 **Dependencies:** None (Standalone)
 
