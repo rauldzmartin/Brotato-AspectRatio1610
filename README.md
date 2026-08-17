@@ -1,45 +1,48 @@
-# AspectRatio1610 — Brotato Mod
+# AspectRatio1610 — The 16:10 Brotato Experience 🥔✨
 
-[![Steam Workshop](https://img.shields.io/badge/Steam_Workshop-Subscribe-1b2838?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
+[![Steam Workshop](https://img.shields.io/badge/Steam_Workshop-Subscribe_Now!-1b2838?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
 [![Game Version](https://img.shields.io/badge/Brotato-v1.1.15.4+-blue?style=for-the-badge)](https://store.steampowered.com/app/1942280/Brotato/)
-[![Platform](https://img.shields.io/badge/Steam_Deck-Verified_16:10-success?style=for-the-badge&logo=steamdeck&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
+[![Platform](https://img.shields.io/badge/Steam_Deck-100%25_Verified-success?style=for-the-badge&logo=steamdeck&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
 
-**AspectRatio1610** provides lightweight, plug-and-play native 16:10 fullscreen support for **Steam Deck (LCD & OLED, 1280x800)** and all **16:10 monitors / laptops (1920x1200, 2560x1600)** in *Brotato*.
-
----
-
-## What It Does
-
-- **100% Full-Screen Gameplay:** Removes black letterbox bars during combat waves, shop, level-ups, and end-run screens.
-- **Top-Docked HUD:** Anchors health, gold, XP, and timer to the true top edge of the 16:10 display for maximum arena visibility.
-- **Preserved 2D Art:** Keeps the Title Screen and character selection centered in clean 16:9 to avoid stretching or distorting hand-drawn menus.
-- **Zero Configuration:** Works automatically out-of-the-box on any 16:10 screen.
-- **Zero Dependencies:** Standalone GDScript with no external library requirements.
-- **Options Bugfix:** Fixes the vanilla Brotato Fullscreen toggle button in Options.
+> *“Are you tired of ugly black bars stealing 10% of your glorious Steam Deck screen? Do you look at your 16:10 monitor and think: ‘My potato deserves every single pixel’? Say no more, friend. We’ve got the ultimate fix!”*
 
 ---
 
-## What It Does NOT Do
+## 🔥 What This Bad Boy DOES:
 
-- **Not an Ultrawide Mod:** Specifically tailored for 16:10 aspect ratios (for 21:9 ultrawide screens, use general multi-resolution mods).
-- **No Complex Settings Menus:** Designed as a seamless, transparent drop-in mod that requires no manual tweaking.
-- **No Gameplay Changes:** Visual and layout adjustments only; does not alter enemy spawns, stats, or mechanics.
-
----
-
-## Installation
-
-### Method 1: Steam Workshop (Recommended)
-1. Subscribe on [Steam Workshop #3785083246](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246).
-2. Launch Brotato — the mod activates automatically.
-
-### Method 2: Manual Installation
-1. Download the latest release `.zip` from the [Releases](https://github.com/rauldzmartin/Brotato-AspectRatio1610/releases) tab.
-2. Extract into your Brotato `mods-unpacked/` directory.
+- 📺 **100% Full-Screen Spud Carnage:** Utterly annihilates black letterbox bars during combat, shop visits, level-ups, and victory screens. Pure wall-to-wall action!
+- 📍 **Top-Docked HUD:** Slaps your health, gold, XP, and wave timer right up against the top edge of your screen. Maximum arena visibility, zero clutter!
+- 🎨 **Respects The Fine Art:** Leaves the Title Screen and character selector in a pristine, centered 16:9 frame. No stretched Picasso faces on our watch!
+- ⚡ **Zero-Brainer Setup:** Plug-and-play perfection. Launch the game, and *boom* — it detects your screen and applies the magic automatically.
+- 🪶 **The Diet Edition:** Zero external dependencies, zero bloatware, zero frame drops. Just lightweight, clean GDScript running like a dream.
+- 🛠️ **Fixes Vanilla Shenanigans:** Repairs the broken fullscreen button in the vanilla Options menu, because you deserve settings that actually work!
 
 ---
 
-## Credits & Acknowledgments
+## 🚫 What This Bad Boy DOES NOT DO:
 
-- Inspired by the resolution expansion research in [KANA-MultiRes](https://github.com/BrotatoMods/KANA-MultiRes) by **KANA** and **Vergir**.
-- Built for the [Brotato ModLoader](https://github.com/BrotatoMods/Brotato-Mod-Loader) ecosystem.
+- ❌ **It will NOT turn your screen into an IMAX 21:9 Ultrawide:** It’s crafted exclusively for 16:10 displays (Steam Deck, 1280x800, 1920x1200, 2560x1600).
+- ❌ **It will NOT dodge red bullets for you:** That skill issue is between you and the alien horde.
+- ❌ **It will NOT drown you in 50 confusing configuration sliders:** It just works out of the box so you can get straight to slaying.
+- ❌ **It will NOT alter gameplay stats or drop rates:** Visuals only, no potato doping here!
+
+---
+
+## 🛒 How To Get It (Today, For Free!)
+
+### 🌟 Method 1: The 1-Click Miracle (Steam Workshop)
+1. Smash that **[Subscribe Button on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)**.
+2. Fire up *Brotato*.
+3. Bask in the glorious border-to-border potato glory.
+
+### 📦 Method 2: The Manual Purist
+1. Grab the latest `.zip` from the [Releases](https://github.com/rauldzmartin/Brotato-AspectRatio1610/releases) tab.
+2. Drop it into your Brotato `mods-unpacked/` folder.
+3. Profit!
+
+---
+
+## 🎩 Standing On The Shoulders Of Giants
+
+- Huge shoutout and inspiration to the resolution expansion pioneers behind [KANA-MultiRes](https://github.com/BrotatoMods/KANA-MultiRes) by **KANA** and **Vergir**.
+- Built with love for the [Brotato ModLoader](https://github.com/BrotatoMods/Brotato-Mod-Loader) community.
