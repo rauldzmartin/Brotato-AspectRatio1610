@@ -29,6 +29,14 @@ Este archivo define las reglas de comportamiento, arquitectura y directrices par
    - La estructura de carpetas dentro del zip empaquetado debe ser exactamente:
      `mods-unpacked/<namespace>-<mod_id>/manifest.json` y `mod_main.gd`.
 
+4. **Protocolo Dual-Release (Steam Workshop + GitHub Releases):**
+   - Tras validar y probar cualquier actualización:
+     1. Incrementar `version_number` en `manifest.json` si aplica.
+     2. Ejecutar la skill `publish-workshop` con `-ChangeNote "<English changelog>"`.
+     3. La skill publica automáticamente en **Steam Workshop** Y crea/adjunta el `.zip` en una **GitHub Release**.
+     4. Comitear y pushear los cambios a `origin/main`.
+     5. Las notas de lanzamiento (Change Notes) DEBEN redactarse **SIEMPRE en inglés**.
+
 ---
 
 ## 3. Comandos Útiles para el Agente

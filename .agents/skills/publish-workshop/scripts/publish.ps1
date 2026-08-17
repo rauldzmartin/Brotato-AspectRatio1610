@@ -112,3 +112,62 @@ if ($LASTEXITCODE -eq 0) {
 } else {
     Write-Host "`nAdvertencia: SteamCMD finalizó con código $LASTEXITCODE. Verifique los logs si hubo algún error de autenticación o Steam Guard." -ForegroundColor Yellow
 }
+
+# 7. Automated GitHub Release Creation & Asset Upload
+try {
+    $versionTag = "v$($manifest.version_number)"
+    Write-Host "`n=== Creando / Sincronizando Release en GitHub ($versionTag) ===" -ForegroundColor Cyan
+    
+    # Get token from Git Credential Manager
+    $credInput = "protocol=https`nhost=github.com`n`n"
+    $credOutput = $credInput | git credential fill
+    $ghToken = ($credOutput | Where-Object { $_ -match '^password=(.+)$' } | ForEach-Object { $matches[1] })
+
+    if (-not [string]::IsNullOrWhiteSpace($ghToken)) {
+        $ghHeaders = @{
+            "Authorization" = "Bearer $ghToken"
+            "Accept" = "application/vnd.github+json"
+            "User-Agent" = "Brotato-Release-Automation"
+        }
+
+        # Check if release exists
+        $repoApi = "https://api.github.com/repos/rauldzmartin/Brotato-AspectRatio1610"
+        $existingRelease = $null
+        try {
+            $existingRelease = Invoke-RestMethod -Uri "$repoApi/releases/tags/$versionTag" -Method Get -Headers $ghHeaders -ErrorAction SilentlyContinue
+        } catch {}
+
+        if (-not $existingRelease) {
+            $relBody = @{
+                tag_name = $versionTag
+                target_commitish = "main"
+                name = "$versionTag: AspectRatio1610 (Steam Deck & 16:10 Fullscreen)"
+                body = "### Changes in $versionTag`n`n$ChangeNote`n`n### Installation:`n- **Steam Workshop:** [Subscribe on Steam Community](https://steamcommunity.com/sharedfiles/filedetails/?id=$WorkshopId)`n- **Manual:** Extract `$zipName` into your Brotato `mods-unpacked/` directory."
+                draft = $false
+                prerelease = $false
+            } | ConvertTo-Json
+
+            $releaseObj = Invoke-RestMethod -Uri "$repoApi/releases" -Method Post -Headers $ghHeaders -Body $relBody -ContentType "application/json"
+            Write-Host "✓ GitHub Release creada: $($releaseObj.html_url)" -ForegroundColor Green
+
+            # Upload zip asset
+            $zipBytes = [System.IO.File]::ReadAllBytes($zipPath)
+            $uploadUri = "$($releaseObj.upload_url -replace '\{\?name,label\}', '')?name=$zipName"
+            $uploadHeaders = @{
+                "Authorization" = "Bearer $ghToken"
+                "Accept" = "application/vnd.github+json"
+                "Content-Type" = "application/zip"
+                "User-Agent" = "Brotato-Release-Automation"
+            }
+            $assetObj = Invoke-RestMethod -Uri $uploadUri -Method Post -Headers $uploadHeaders -Body $zipBytes
+            Write-Host "✓ Zip subido a GitHub Release: $($assetObj.browser_download_url)" -ForegroundColor Green
+        } else {
+            Write-Host "✓ GitHub Release ya existe para $versionTag: $($existingRelease.html_url)" -ForegroundColor Green
+        }
+    } else {
+        Write-Host "Nota: No se pudo obtener el token de Git para crear la release en GitHub de forma automática." -ForegroundColor Yellow
+    }
+} catch {
+    Write-Host "Aviso: Error durante la creación de la release en GitHub: $_" -ForegroundColor Yellow
+}
+

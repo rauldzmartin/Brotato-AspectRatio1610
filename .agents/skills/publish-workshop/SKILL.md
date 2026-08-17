@@ -38,4 +38,5 @@ To publish or update the mod to Steam Workshop in a single automated step:
 1. **Manifest Validation:** Ensures `extra.godot.compatible_game_version` is present to prevent ModLoader startup crashes.
 2. **Zip Structure:** Packs `mods-unpacked/` as the root directory within the zip file.
 3. **SteamCMD Integration:** Automatically uses cached credentials in `SteamCMD` to publish headlessly without manual prompts.
-4. **Language Rule:** Change notes and release summaries published to Steam Workshop MUST ALWAYS be in English.
+4. **GitHub Releases Integration:** Automatically creates the GitHub Release for the tag and uploads the `.zip` binary.
+5. **Language Rule:** Change notes and release summaries published to Steam Workshop and GitHub MUST ALWAYS be in English.
