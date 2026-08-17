@@ -42,6 +42,14 @@
 
 ---
 
+## 🎮 Game Version & Compatibility
+
+- **Brotato Version:** Tested & verified 100% working on the current game release (**v1.1.15.4**+).
+- **ModLoader:** Built for and fully compatible with **ModLoader v6.2.0+**.
+- **Hardware:** Steam Deck (LCD & OLED), plus all 16:10 laptops and desktop monitors (1280x800, 1920x1200, 2560x1600, etc.).
+
+---
+
 ## 🎩 Standing On The Shoulders Of Giants
 
 - Huge shoutout and inspiration to the resolution expansion pioneers behind [KANA-MultiRes](https://github.com/BrotatoMods/KANA-MultiRes) by **KANA** and **Vergir**.

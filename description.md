@@ -29,6 +29,13 @@ AspectRatio1610 (Steam Deck & 16:10 Fullscreen)
 [*] [b]It will NOT alter gameplay stats or drop rates:[/b] Visuals only, no potato doping here!
 [/list]
 
+[h2]🎮 Game Version & Compatibility[/h2]
+[list]
+[*] [b]Brotato Version:[/b] Tested & verified 100% working on the current game release ([b]v1.1.15.4[/b]+).
+[*] [b]ModLoader:[/b] Built for and fully compatible with [b]ModLoader v6.2.0+[/b].
+[*] [b]Hardware:[/b] Steam Deck (LCD & OLED), plus all 16:10 laptops and monitors (1280x800, 1920x1200, 2560x1600, etc.).
+[/list]
+
 [h2]🎩 Standing On The Shoulders Of Giants[/h2]
 [list]
 [*] Huge shoutout and inspiration to the resolution expansion pioneers behind [url=https://github.com/BrotatoMods/KANA-MultiRes]KANA-MultiRes[/url] by [b]KANA[/b] and [b]Vergir[/b].
