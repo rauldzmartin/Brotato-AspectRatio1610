@@ -1,63 +1,45 @@
 # AspectRatio1610 — Brotato Mod
 
-[![Steam Workshop](https://img.shields.io/badge/Steam_Workshop-AspectRatio1610-1b2838?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
+[![Steam Workshop](https://img.shields.io/badge/Steam_Workshop-Subscribe-1b2838?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
 [![Game Version](https://img.shields.io/badge/Brotato-v1.1.15.4+-blue?style=for-the-badge)](https://store.steampowered.com/app/1942280/Brotato/)
 [![Platform](https://img.shields.io/badge/Steam_Deck-Verified_16:10-success?style=for-the-badge&logo=steamdeck&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246)
 
-Native 16:10 Fullscreen & Aspect Ratio mod for **Brotato** (v1.1.15.4+).
-
-Designed for **Steam Deck (LCD & OLED, 1280x800)** and all **16:10 monitors / laptops (1920x1200, 2560x1600, etc.)**.
+**AspectRatio1610** provides lightweight, plug-and-play native 16:10 fullscreen support for **Steam Deck (LCD & OLED, 1280x800)** and all **16:10 monitors / laptops (1920x1200, 2560x1600)** in *Brotato*.
 
 ---
 
-## Features
+## What It Does
 
-- **100% Full-Screen Gameplay:** Eliminates black letterbox bars during combat waves without stretching or pixel distortion.
-- **Full-Screen Shop & Upgrade Menus:** Seamless full-screen experience across your entire run (combat, shop, level-ups, and end-run summary).
-- **Top-Anchored HUD:** Health bar, gold, XP, and wave timer are docked directly to the true top edge of the 16:10 screen for maximum arena visibility.
-- **Clean 16:9 Letterbox Menus:** The Title Screen and character selection remain perfectly centered in native 16:9, preserving the hand-crafted multi-layer 2D artwork without graphical seams.
-- **Automatic Borderless Fullscreen:** Automatically starts in borderless fullscreen matching your display's native resolution.
-- **Fixed Options Toggle:** Repairs the broken vanilla Fullscreen toggle button in the Options menu with persistent settings saved in `user://fullscreen_mod.json`.
-- **Zero Dependencies & Zero Overhead:** Standalone, ultra-lightweight GDScript with zero performance impact and clean logs.
-
----
-
-## Repository Structure
-
-```text
-.
-├── mods-unpacked/
-│   └── rauldzmartin-AspectRatio1610/
-│       ├── manifest.json                  # ModLoader manifest metadata
-│       ├── mod_main.gd                    # Main mod entrypoint & runtime context poller
-│       ├── README.md                      # Mod README
-│       └── extensions/
-│           └── fullscreen_utils.gd        # Resolution, stretch mode, HUD, & borderless logic
-├── description.md                         # Steam Workshop listing details (BBCode format)
-├── preview.jpg                            # Steam Workshop cover preview image
-├── AGENTS.md                              # Antigravity CLI / Agentic AI guidelines
-└── .gitignore
-```
+- **100% Full-Screen Gameplay:** Removes black letterbox bars during combat waves, shop, level-ups, and end-run screens.
+- **Top-Docked HUD:** Anchors health, gold, XP, and timer to the true top edge of the 16:10 display for maximum arena visibility.
+- **Preserved 2D Art:** Keeps the Title Screen and character selection centered in clean 16:9 to avoid stretching or distorting hand-drawn menus.
+- **Zero Configuration:** Works automatically out-of-the-box on any 16:10 screen.
+- **Zero Dependencies:** Standalone GDScript with no external library requirements.
+- **Options Bugfix:** Fixes the vanilla Brotato Fullscreen toggle button in Options.
 
 ---
 
-## Building & Packaging for Steam Workshop
+## What It Does NOT Do
 
-To package the mod into a Steam Workshop-compatible zip file:
+- **Not an Ultrawide Mod:** Specifically tailored for 16:10 aspect ratios (for 21:9 ultrawide screens, use general multi-resolution mods).
+- **No Complex Settings Menus:** Designed as a seamless, transparent drop-in mod that requires no manual tweaking.
+- **No Gameplay Changes:** Visual and layout adjustments only; does not alter enemy spawns, stats, or mechanics.
 
-```powershell
-Compress-Archive -Path "mods-unpacked" -DestinationPath "rauldzmartin-AspectRatio1610-1.0.0.zip" -CompressionLevel Optimal -Force
-```
+---
 
-### Automated Publishing (CLI via Skill & SteamCMD):
+## Installation
 
-```powershell
-& ".agents/skills/publish-workshop/scripts/publish.ps1" -ChangeNote "<English changelog description>"
-```
+### Method 1: Steam Workshop (Recommended)
+1. Subscribe on [Steam Workshop #3785083246](https://steamcommunity.com/sharedfiles/filedetails/?id=3785083246).
+2. Launch Brotato — the mod activates automatically.
 
-### Manual Publishing via Godot Workshop Utility:
-1. Launch `GodotWorkshopUtility.exe` from your Brotato game directory (`SteamLibrary/steamapps/common/Brotato/`).
-2. Select `rauldzmartin-AspectRatio1610-1.0.0.zip` in **Select mod file**.
-3. Select `preview.jpg` in **Select preview image**.
-4. Set **Workshop ID** to `3785083246` (for updates) or leave blank for a new mod.
-5. Set tags (`GUI`, `Utilities`) and click **Upload**.
+### Method 2: Manual Installation
+1. Download the latest release `.zip` from the [Releases](https://github.com/rauldzmartin/Brotato-AspectRatio1610/releases) tab.
+2. Extract into your Brotato `mods-unpacked/` directory.
+
+---
+
+## Credits & Acknowledgments
+
+- Inspired by the resolution expansion research in [KANA-MultiRes](https://github.com/BrotatoMods/KANA-MultiRes) by **KANA** and **Vergir**.
+- Built for the [Brotato ModLoader](https://github.com/BrotatoMods/Brotato-Mod-Loader) ecosystem.
