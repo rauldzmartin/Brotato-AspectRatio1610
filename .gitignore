@@ -16,9 +16,16 @@ HANDOVER*.md
 dist/
 *.vdf
 
+# Internal development & workshop tooling
+.agents/
+AGENTS.md
+description.md
+preview.jpg
+
 # OS / Editor metadata
 .DS_Store
 Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
