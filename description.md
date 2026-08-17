@@ -38,6 +38,7 @@ AspectRatio1610 (Steam Deck & 16:10 Fullscreen)
 
 [h2]🎩 Standing On The Shoulders Of Giants[/h2]
 [list]
+[*] Developed using [b]Agentic Coding[/b] workflows and automated modding pipelines.
 [*] Huge shoutout and inspiration to the resolution expansion pioneers behind [url=https://github.com/BrotatoMods/KANA-MultiRes]KANA-MultiRes[/url] by [b]KANA[/b] and [b]Vergir[/b].
 [*] Built with love for the [url=https://github.com/BrotatoMods/Brotato-Mod-Loader]Brotato ModLoader[/url] community.
 [/list]

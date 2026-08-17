@@ -52,5 +52,6 @@
 
 ## 🎩 Standing On The Shoulders Of Giants
 
+- Developed with **Agentic Coding** pairing workflows and automated modding pipelines.
 - Huge shoutout and inspiration to the resolution expansion pioneers behind [KANA-MultiRes](https://github.com/BrotatoMods/KANA-MultiRes) by **KANA** and **Vergir**.
 - Built with love for the [Brotato ModLoader](https://github.com/BrotatoMods/Brotato-Mod-Loader) community.
