@@ -2,32 +2,38 @@
 
 ## Title
 ```text
-Native 16:10 FullScreen (Steam Deck & Monitors)
+AspectRatio1610 (Steam Deck & 16:10 Fullscreen)
 ```
 
 ## Description (Steam BBCode)
 ```bbcode
-[h1]Native 16:10 Fullscreen & Aspect Ratio for Brotato[/h1]
+[h1]AspectRatio1610 — The 16:10 Brotato Experience 🥔✨[/h1]
 
-Brings true full-screen support for [b]Steam Deck (1280x800, LCD & OLED)[/b] and all [b]16:10 monitors / laptops (1920x1200, 2560x1600, etc.)[/b]. 
+[quote]Are you tired of ugly black bars stealing 10% of your glorious Steam Deck screen? Do you look at your 16:10 monitor and think: "My potato deserves every single pixel"? Say no more, friend. We’ve got the ultimate fix![/quote]
 
-Say goodbye to black letterbox bars during your runs while keeping the original menus crisp and undistorted!
-
-[h2]Features[/h2]
+[h2]🔥 What This Bad Boy DOES:[/h2]
 [list]
-[*] [b]100% Full-Screen Gameplay:[/b] Removes top and bottom black bars during combat waves, filling your entire 16:10 display with zero stretching or pixel distortion.
-[*] [b]Full-Screen Shop & Upgrade Menus:[/b] Seamless full-screen experience across your entire run (combat, shop, level-ups, and end-run summary).
-[*] [b]Top-Anchored HUD:[/b] Health bar, gold, XP, and wave timer are docked directly to the very top edge of the screen for maximum arena visibility.
-[*] [b]Clean 16:9 Letterbox Menus:[/b] The Title Screen and character selection remain perfectly centered in native 16:9, preserving the hand-crafted multi-layer 2D artwork without graphical seams.
-[*] [b]Automatic Borderless Fullscreen:[/b] Automatically starts in borderless fullscreen matching your display's native resolution.
-[*] [b]Fixed Options Toggle:[/b] Repairs the broken vanilla Fullscreen toggle button in the Options menu with persistent settings.
-[*] [b]Zero Dependencies & Zero Overhead:[/b] Standalone, ultra-lightweight GDScript with zero performance impact and clean logs.
+[*] [b]100% Full-Screen Spud Carnage:[/b] Utterly annihilates black letterbox bars during combat, shop visits, level-ups, and victory screens. Pure wall-to-wall action!
+[*] [b]Top-Docked HUD:[/b] Slaps your health, gold, XP, and wave timer right up against the top edge of your screen. Maximum arena visibility, zero clutter!
+[*] [b]Respects The Fine Art:[/b] Leaves the Title Screen and character selector in a pristine, centered 16:9 frame. No stretched Picasso faces on our watch!
+[*] [b]Zero-Brainer Setup:[/b] Plug-and-play perfection. Launch the game, and [i]boom[/i] — it detects your screen and applies the magic automatically.
+[*] [b]The Diet Edition:[/b] Zero external dependencies, zero bloatware, zero frame drops. Just lightweight, clean GDScript running like a dream.
+[*] [b]Fixes Vanilla Shenanigans:[/b] Repairs the broken fullscreen button in the vanilla Options menu, because you deserve settings that actually work!
 [/list]
 
-[h2]Compatibility[/h2]
+[h2]🚫 What This Bad Boy DOES NOT DO:[/h2]
 [list]
-[*] Compatible with [b]Brotato v1.1.15.4+[/b] and [b]ModLoader v6.x[/b].
-[*] Works out of the box with other UI and gameplay mods.
-[*] No external libraries or third-party dependencies required.
+[*] [b]It will NOT turn your screen into an IMAX 21:9 Ultrawide:[/b] It’s crafted exclusively for 16:10 displays (Steam Deck, 1280x800, 1920x1200, 2560x1600).
+[*] [b]It will NOT dodge red bullets for you:[/b] That skill issue is between you and the alien horde.
+[*] [b]It will NOT drown you in 50 confusing configuration sliders:[/b] It just works out of the box so you can get straight to slaying.
+[*] [b]It will NOT alter gameplay stats or drop rates:[/b] Visuals only, no potato doping here!
 [/list]
+
+[h2]🎩 Standing On The Shoulders Of Giants[/h2]
+[list]
+[*] Huge shoutout and inspiration to the resolution expansion pioneers behind [url=https://github.com/BrotatoMods/KANA-MultiRes]KANA-MultiRes[/url] by [b]KANA[/b] and [b]Vergir[/b].
+[*] Built with love for the [url=https://github.com/BrotatoMods/Brotato-Mod-Loader]Brotato ModLoader[/url] community.
+[/list]
+
+[url=https://github.com/rauldzmartin/Brotato-AspectRatio1610]View Source on GitHub[/url]
 ```
