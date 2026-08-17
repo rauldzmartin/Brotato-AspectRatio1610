@@ -1,0 +1,24 @@
+# Godot 3 / ModLoader temporary files
+*.import
+.import/
+export_presets.cfg
+
+# Logs & backups
+*.log
+*.bak*
+*.tmp
+HANDOFF*.md
+HANDOVER*.md
+
+# Packaged distribution archives
+*.zip
+*.pck
+dist/
+*.vdf
+
+# OS / Editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

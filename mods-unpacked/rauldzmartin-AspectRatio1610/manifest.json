@@ -1,0 +1,19 @@
+{
+	"name": "AspectRatio1610",
+	"namespace": "rauldzmartin",
+	"version_number": "1.0.0",
+	"description": "Native 16:10 fullscreen support for 16:10 monitors, laptops, and handhelds (Steam Deck, 1280x800, 1920x1200, 2560x1600). Full-screen gameplay and shop without black bars, with top-anchored HUD and clean 16:9 letterbox menus.",
+	"website_url": "",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"authors": ["rauldzmartin"],
+			"tags": ["Resolution", "16:10", "SteamDeck", "QoL"],
+			"description_rich": "Native 16:10 Fullscreen for all 16:10 screens (1280x800, 1920x1200, 2560x1600, Steam Deck, etc.):\n- 100% full-screen gameplay, shop, and end-run screens without black bars\n- HUD anchored directly to the top edge of the 16:10 screen\n- Menus stay centered and proportionate in 16:9 letterbox without distorted 2D artwork\n- Automatically applies borderless fullscreen at native screen resolution\n- Fixes the vanilla Fullscreen toggle button in Options\n- Zero external dependencies",
+			"load_before": [],
+			"incompatibilities": [],
+			"compatible_mod_loader_version": ["6.2.0"],
+			"compatible_game_version": ["1.1.15.4"]
+		}
+	}
+}
